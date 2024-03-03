@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://533ifbso8meu"]
+
+[ext_resource type="Texture2D" uid="uid://d3hq0hq6bgup3" path="res://assets/background.png" id="1_k5m6l"]
+[ext_resource type="Theme" uid="uid://f0j4gxh8iqin" path="res://Base_Theme.tres" id="2_bbc0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym5tt"]
+size = Vector2(16, 176)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlgij"]
+size = Vector2(256, 16)
+
+[node name="world" type="Node2D"]
+position = Vector2(320, 180)
+
+[node name="ViewBounds" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ViewBounds"]
+position = Vector2(-280, -92)
+shape = SubResource("RectangleShape2D_ym5tt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="ViewBounds"]
+position = Vector2(-160, -188)
+shape = SubResource("RectangleShape2D_hlgij")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="ViewBounds"]
+position = Vector2(-160, 4)
+shape = SubResource("RectangleShape2D_hlgij")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ViewBounds"]
+position = Vector2(-40, -92)
+shape = SubResource("RectangleShape2D_ym5tt")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-160, -90)
+texture = ExtResource("1_k5m6l")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -320.0
+offset_top = -180.0
+offset_right = -272.0
+theme = ExtResource("2_bbc0v")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 21.0
+scale = Vector2(0.5, 0.5)
+theme = ExtResource("2_bbc0v")
+text = "Click Me"
+
+[node name="Button2" type="Button" parent="Panel"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 68.0
+offset_bottom = 37.0
+text = "Clickaroo"

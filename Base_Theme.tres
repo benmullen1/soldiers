@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://f0j4gxh8iqin"]
+
+[ext_resource type="FontFile" uid="uid://ce4dct86fjh1v" path="res://assets/fonts/DePixelKlein.otf" id="1_ttmp5"]
+
+[resource]
+resource_local_to_scene = true
+default_base_scale = 1.0
+default_font = ExtResource("1_ttmp5")
+default_font_size = 12
